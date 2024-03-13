@@ -3,14 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.moveZeros = void 0;
 const moveZeros = (arr) => {
     let nonZeroIndex = 0;
-    // Iterate through the array and move non-zero elements to the front
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] !== 0) {
             arr[nonZeroIndex] = arr[i];
             nonZeroIndex++;
         }
     }
-    // Fill the remaining elements with zeros
     for (let i = nonZeroIndex; i < arr.length; i++) {
         arr[i] = 0;
     }
